@@ -1,0 +1,9 @@
+.issued-ticket-summary-item {
+  @apply text-center;
+  p {
+    @apply font-semibold;
+  }
+  h6 {
+    @apply text-gray-500 font-semibold;
+  }
+}

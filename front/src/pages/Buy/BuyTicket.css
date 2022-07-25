@@ -1,0 +1,16 @@
+.buy-ticket-title {
+  @apply font-semibold;
+}
+
+
+.buy-ticket-amount {
+  button {
+    @apply px-4 py-3 text-primaryColor 
+      font-bold bg-subBgColor rounded-lg opacity-80
+      hover:opacity-100 ;
+    width: auto !important;
+  }
+  p {
+    @apply font-semibold text-lg flex-1 text-center;
+  }
+}

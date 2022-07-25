@@ -1,0 +1,54 @@
+.overview-title {
+  h3 {
+    @apply overflow-hidden whitespace-nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.ticket-sum {
+  @apply flex items-center mt-3;
+  max-height: 40px;
+
+  i {
+    @apply text-lg;
+    margin-top: 1px;
+  }
+
+  p {
+    @apply text-sm font-semibold ml-2 leading-5;
+  }
+  .ticket-sum-location {
+    max-height: 40px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ticket-sum-owner {
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+.ticket-category {
+  @apply px-2 rounded-3xl 
+  border border-solid border-primaryColor text-primaryColor 
+  inline-block text-center select-none;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+.attach-date {
+  @apply border border-solid border-primaryColor rounded-3xl bg-white px-4 mr-1 mt-1 flex flex-col justify-center select-none;
+  small {
+    @apply text-gray-600 text-xs font-light;
+  }
+  p {
+    @apply text-primaryColor text-sm font-semibold;
+    margin-top: -.2rem;
+  }
+}
+
+.overview_used_sign {
+  box-shadow: 0 4px 4px 0 theme("colors.gray.500");
+  padding: 10px 5px;
+}
