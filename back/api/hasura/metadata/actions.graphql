@@ -1,0 +1,98 @@
+type Mutation {
+  approveTicket(
+    user_id: Int!
+    token: Int!
+  ): data
+}
+
+type Mutation {
+  createBuyTicket(
+    create_at: timestamptz
+    ticket_id: Int!
+    owner_address: String!
+    id_transaction: Int!
+    user_id: Int!
+  ): ticket
+}
+
+type Mutation {
+  createEvent(
+    end_date: timestamp!
+    image: String!
+    owner: String!
+    localtion: String!
+    name: String!
+    start_date: timestamp!
+    catogory_id: jsonb
+  ): event
+}
+
+type Mutation {
+  createExchange(
+    create_at: timestamptz
+    ticket_id: Int!
+    owner_address: String!
+  ): data
+}
+
+type Mutation {
+  createQrCode(
+    ticket_id: Int!
+  ): data
+}
+
+type Mutation {
+  createTicket(
+    create_at: timestamptz!
+    user_id: Int!
+    type: Int!
+    event: Int!
+    owner_address: String!
+    ticket_type: Int!
+    supply: Int!
+    approver: jsonb
+    price: float8!
+    image_link: String!
+    class_ticket: String!
+  ): Ticket
+}
+
+type Mutation {
+  createWallet(
+    wallet_address: String!
+  ): wallet
+}
+
+type Mutation {
+  exchangeCurrency(
+    currency: float8!
+  ): data
+}
+
+type wallet {
+  wallet_address: String
+  user_id: Int!
+}
+
+type event {
+  event: jsonb!
+}
+
+type Ticket {
+  data: jsonb!
+}
+
+type ticket {
+  data: jsonb!
+}
+
+type data {
+  currency: float8!
+}
+
+type MyQueryOutput {
+  currency: float8
+  date_update: timestamp
+  id: Int!
+}
+
