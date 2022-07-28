@@ -60,4 +60,5 @@ Q2-2023: Support Multiple Chain, Governance Token
 
 ### E. Project Demo Link
 
-- Demo:
+- Demo: https://dte.law3.app/
+- Credential: admin / 9rR9fT29tvPZ
