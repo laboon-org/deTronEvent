@@ -1,0 +1,15 @@
+1. Event contract
+
+    - listing token to marketplace
+        -> transfer token to contract
+    - sell token
+    - buy token
+
+2. Ticket contract
+    - tạo ra các tickets vs metadata:
+        + tokenId
+        + eventId
+        + eventType
+        + pathData
+
+

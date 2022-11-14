@@ -1,0 +1,691 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "DeTronEvent": {
+        "src": "contracts/DeTronEvent.sol:340",
+        "version": {
+          "withMetadata": "9b4dfd08fee49a9d45cbba08bf244ea18577a3ae95f35eb2c83311d9f46a3938",
+          "withoutMetadata": "074d719cd8f8fc694ec4d646a5ab30a4a4483fe63e6ad0559c8d6c4c5b7a8317",
+          "linkedWithoutMetadata": "074d719cd8f8fc694ec4d646a5ab30a4a4483fe63e6ad0559c8d6c4c5b7a8317"
+        },
+        "inherit": [
+          "IDeTronEvent",
+          "TRC721",
+          "ITRC721"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "methods": [
+          "(address,string,string)",
+          "mint(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "DeTronEvent",
+            "src": "contracts/DeTronEvent.sol:363"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_tokenOwner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:127"
+            },
+            {
+              "label": "_tokenApprovals",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:130"
+            },
+            {
+              "label": "_ownedTokensCount",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:133"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:136"
+            },
+            {
+              "label": "gateway",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_address",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:343"
+            },
+            {
+              "label": "name",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_string_storage",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:345"
+            },
+            {
+              "label": "symbol",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_string_storage",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:346"
+            },
+            {
+              "label": "_tokenMeta",
+              "offset": 0,
+              "slot": "7",
+              "type": "t_mapping(t_uint256,t_struct(TokenMeta)684_storage)",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:357"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(TokenMeta)684_storage)": {
+              "label": "mapping(uint256 => struct DeTronEvent.TokenMeta)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(TokenMeta)684_storage": {
+              "label": "struct DeTronEvent.TokenMeta",
+              "members": [
+                {
+                  "label": "id",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "price",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "name",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "uri",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "sale",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "4"
+                }
+              ],
+              "numberOfBytes": "160"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IDeTronEvent": {
+        "src": "contracts/DeTronEvent.sol:331",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "mint(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ITRC721": {
+        "src": "contracts/DeTronEvent.sol:77",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ITRC721Receiver": {
+        "src": "contracts/DeTronEvent.sol:57",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "onTRC721Received(address,uint256)",
+          "getWithdrawFee()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/DeTronEvent.sol:7",
+        "version": {
+          "withMetadata": "0775489d95e3c30ec0f098d1aa4ae4acf71819ba3362c392c4e0813a11c28fea",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "TRC721": {
+        "src": "contracts/DeTronEvent.sol:123",
+        "version": {
+          "withMetadata": "e44342642d9e0fae2041d53e790c436f3bebaa4869354b30110e5af34ab3eab0",
+          "withoutMetadata": "6f43fec5fe1436b6c370e0d42f00db4078a01d319621b1ef2f91b6cbbcefc1d3",
+          "linkedWithoutMetadata": "6f43fec5fe1436b6c370e0d42f00db4078a01d319621b1ef2f91b6cbbcefc1d3"
+        },
+        "inherit": [
+          "ITRC721"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "transferFrom(address,address,uint256)",
+          "burn(uint256)",
+          "transfer(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_tokenOwner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:127"
+            },
+            {
+              "label": "_tokenApprovals",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:130"
+            },
+            {
+              "label": "_ownedTokensCount",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:133"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:136"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "DeTronEvent": {
+        "src": "contracts/DeTronEvent.sol:341",
+        "version": {
+          "withMetadata": "95ce3209ec00c0a0a1cdd8d4d2992c33bad39afe8fb702ef7111d17514361498",
+          "withoutMetadata": "074d719cd8f8fc694ec4d646a5ab30a4a4483fe63e6ad0559c8d6c4c5b7a8317",
+          "linkedWithoutMetadata": "074d719cd8f8fc694ec4d646a5ab30a4a4483fe63e6ad0559c8d6c4c5b7a8317"
+        },
+        "inherit": [
+          "IDeTronEvent",
+          "TRC721",
+          "ITRC721"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "methods": [
+          "(address,string,string)",
+          "mint(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "DeTronEvent",
+            "src": "contracts/DeTronEvent.sol:364"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_tokenOwner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:128"
+            },
+            {
+              "label": "_tokenApprovals",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:131"
+            },
+            {
+              "label": "_ownedTokensCount",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:134"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:137"
+            },
+            {
+              "label": "gateway",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_address",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:344"
+            },
+            {
+              "label": "name",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_string_storage",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:346"
+            },
+            {
+              "label": "symbol",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_string_storage",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:347"
+            },
+            {
+              "label": "_tokenMeta",
+              "offset": 0,
+              "slot": "7",
+              "type": "t_mapping(t_uint256,t_struct(TokenMeta)684_storage)",
+              "contract": "DeTronEvent",
+              "src": "contracts/DeTronEvent.sol:358"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(TokenMeta)684_storage)": {
+              "label": "mapping(uint256 => struct DeTronEvent.TokenMeta)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(TokenMeta)684_storage": {
+              "label": "struct DeTronEvent.TokenMeta",
+              "members": [
+                {
+                  "label": "id",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "price",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "name",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "uri",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "sale",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "4"
+                }
+              ],
+              "numberOfBytes": "160"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IDeTronEvent": {
+        "src": "contracts/DeTronEvent.sol:332",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "mint(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ITRC721": {
+        "src": "contracts/DeTronEvent.sol:78",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ITRC721Receiver": {
+        "src": "contracts/DeTronEvent.sol:58",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "onTRC721Received(address,uint256)",
+          "getWithdrawFee()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/DeTronEvent.sol:8",
+        "version": {
+          "withMetadata": "2ad7199efc9a2fb2f9b4a2e235d4d5234119fa85bee14f0617a8325b64c0d6fe",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "TRC721": {
+        "src": "contracts/DeTronEvent.sol:124",
+        "version": {
+          "withMetadata": "2d8a9a956e5afd88704e375f726a0c5289eb6cfb16f4f0e8e9e5aed3d927487a",
+          "withoutMetadata": "6f43fec5fe1436b6c370e0d42f00db4078a01d319621b1ef2f91b6cbbcefc1d3",
+          "linkedWithoutMetadata": "6f43fec5fe1436b6c370e0d42f00db4078a01d319621b1ef2f91b6cbbcefc1d3"
+        },
+        "inherit": [
+          "ITRC721"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "transferFrom(address,address,uint256)",
+          "burn(uint256)",
+          "transfer(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_tokenOwner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:128"
+            },
+            {
+              "label": "_tokenApprovals",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:131"
+            },
+            {
+              "label": "_ownedTokensCount",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:134"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "TRC721",
+              "src": "contracts/DeTronEvent.sol:137"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    }
+  ]
+}
