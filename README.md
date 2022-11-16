@@ -66,5 +66,6 @@
 
 ### F. Forum
 
-Season 2: https://forum.trondao.org/t/detronevent-event-management-eco-system/4392
-Season 3: https://forum.trondao.org/t/detronevent-event-ticket-eco-system-season-3/13153
+- Season 2: https://forum.trondao.org/t/detronevent-event-management-eco-system/4392
+
+- Season 3: https://forum.trondao.org/t/detronevent-event-ticket-eco-system-season-3/13153
