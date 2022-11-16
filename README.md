@@ -17,8 +17,8 @@
 
 #### What's next (Milestones)
 
-- Q3-2022: Ticket and Event Management for Eco-System
-- Q4-2022: Ticket Staking, Mobile App
+- Q3-2022: Ticket and Event Management for Eco-System (Done: TestNet Smart Contract was integrated)
+- Q4-2022: Ticket Staking, Mobile App (Work In Progress)
 - Q1-2023: Complete Roles of Stakeholders, Sponsors, and Influencers
 - Q2-2023: Support Multiple Chain, Governance Token
 
@@ -56,9 +56,15 @@
 - Solidity
 - TailwindCSS
 - Web3
-- TronLink
+- TronLink and more
 
 ### E. Project Demo Link
 
 - Demo: https://dte.law3.app/
 - Credential: admin / 9rR9fT29tvPZ
+
+
+### F. Forum
+
+Season 2: https://forum.trondao.org/t/detronevent-event-management-eco-system/4392
+Season 3: https://forum.trondao.org/t/detronevent-event-ticket-eco-system-season-3/13153
