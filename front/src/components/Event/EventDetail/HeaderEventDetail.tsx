@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, memo } from 'react'
 
 interface Props {
   tab: number;
@@ -29,4 +29,4 @@ const HeaderEventDetail: React.FC<Props> = ({ tab, setTab }: Props): ReactElemen
   )
 }
 
-export default HeaderEventDetail
+export default memo(HeaderEventDetail)

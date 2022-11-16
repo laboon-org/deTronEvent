@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import { PieChart } from 'react-minimal-pie-chart';
 import { useQuery } from '@apollo/client';
 import { EventStatisInterface, getEventStatistic } from '../../../api/queries';
@@ -99,4 +99,4 @@ const EventStatistics: React.FC<Props> = ({eventID}: Props): React.ReactElement 
   )
 }
 
-export default EventStatistics
+export default memo(EventStatistics)

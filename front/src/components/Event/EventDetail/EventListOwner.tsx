@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client'
-import React, { ReactElement, useContext, useState } from 'react'
+import React, { ReactElement, useContext, useState, memo } from 'react'
 import { FaUser } from 'react-icons/fa'
 
 import { TbTicket } from 'react-icons/tb'
@@ -58,4 +58,4 @@ const EventListOwner:  React.FC<Props> = ({id}:Props): ReactElement => {
   )
 }
 
-export default EventListOwner
+export default memo(EventListOwner)

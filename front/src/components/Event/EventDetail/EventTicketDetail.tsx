@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useEffect, useState } from 'react'
+import React, { ReactElement, useContext, useEffect, useState, memo } from 'react'
 import ICON_TOTAL from '../../../assets/images/total-icon.png'
 import ICON_BOUGHT from '../../../assets/images/bought-icon.png'
 import TicketList from '../../Tickets/TicketList/TicketList';
@@ -127,4 +127,4 @@ const EventAnalyseDetail: React.FC<Props> = ({id, total, bought, ownerAddress}: 
   )
 }
 
-export default EventAnalyseDetail
+export default memo(EventAnalyseDetail)

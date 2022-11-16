@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useState } from 'react'
+import React, { ReactElement, useContext, useState, memo } from 'react'
 import { FaRegCalendarCheck } from 'react-icons/fa'
 import { IoLocationSharp } from 'react-icons/io5'
 
@@ -132,4 +132,4 @@ const EventDetail: React.FC = (): ReactElement => {
   )
 }
 
-export default EventDetail
+export default memo(EventDetail)

@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, memo } from 'react'
 
 // import './OverviewItem.css'
 import { EventCategory } from '../../api/queries';
@@ -38,4 +38,4 @@ const EventCategories: React.FC<Props> = (props: Props): ReactElement => {
   )
 }
 
-export default EventCategories
+export default memo(EventCategories)

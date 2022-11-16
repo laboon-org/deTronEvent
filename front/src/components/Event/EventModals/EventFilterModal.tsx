@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import { ImCross } from 'react-icons/im';
 import { filters } from '../../../data/eventFilters';
 
@@ -58,4 +58,4 @@ const EventFilterModal: React.FC<Props> = ({activeFilterModal, setActiveFilterMo
   )
 }
 
-export default EventFilterModal
+export default memo(EventFilterModal)

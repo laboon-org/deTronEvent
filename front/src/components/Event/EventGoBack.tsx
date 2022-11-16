@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { useNavigate, NavigateFunction } from 'react-router-dom';
@@ -32,4 +32,4 @@ const EventGoBack: React.FC<Props> = ({ image, rootURL }: Props): React.ReactEle
   )
 }
 
-export default EventGoBack
+export default memo(EventGoBack)

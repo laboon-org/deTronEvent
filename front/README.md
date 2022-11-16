@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+# deTron Event
+=======
 # deTronEvent
+>>>>>>> 7574043839f36aff5b5c8a1a48342eb47eb0de9b
 
 - Frontend
 ## Getting Started

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { useNavigate, NavigateFunction } from 'react-router-dom';
@@ -39,4 +39,4 @@ const EventHeaderDetail: React.FC<Props> = ({ image, rootURL, name }: Props): Re
   )
 }
 
-export default EventHeaderDetail
+export default memo(EventHeaderDetail)

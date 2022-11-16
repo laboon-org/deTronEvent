@@ -82,13 +82,6 @@ const EventPage = () => {
         <section className='mt-28'>
           <h3 className='text-2xl font-bold'>Event</h3>
         </section>
-        <section >
-          <label className='text-lg flex items-center mt-3 cursor-pointer'>
-            <Checkbox checked={isCheck} size="small" onChange={(e) => handleCheck(e)}/>
-            Hide expired events
-          </label>
-          
-        </section>
         <section className='mt-3'>
           {(loading || loading2) 
           ? <LoadingField />
@@ -97,9 +90,15 @@ const EventPage = () => {
             ? 
               <p>Error: Cannot load events!</p>
             : 
-              events 
+              events.length > 0
               ?
-                <EventList events={events} />
+                <article>
+                  <label className='text-lg flex items-center mt-3 cursor-pointer'>
+                    <Checkbox checked={isCheck} size="small" onChange={(e) => handleCheck(e)}/>
+                    Hide expired events
+                  </label>
+                  <div className='mt-3'><EventList events={events} /></div>
+                </article>
               :
                 <EventNotFound redirect={handleCreateEvent}/>     
           }

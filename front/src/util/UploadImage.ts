@@ -3,7 +3,7 @@ export default async (e:File):Promise<string> => {
     const formData = new FormData();
     formData.append("file", e);
     const result= await axios
-      .post("https://ntsapiv2.herokuapp.com/uploadfile", formData, {
+      .post("https://ntsapiv3.herokuapp.com/uploadfile", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

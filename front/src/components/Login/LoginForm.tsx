@@ -33,7 +33,7 @@ const LoginForm: React.FC = (): ReactElement => {
       <div className='title-wrap text-center mt-12'>
         <div id="logo" className='flex flex-col items-center justify-center'>
           <img src={IMG_LOGO} alt="NTS" className='object-cover h-32' />
-          <p className='text-primaryColor font-bold text-2xl mt-2'>Tron Event</p>
+          <p className='text-primaryColor font-bold text-2xl mt-2'>deTron Event</p>
         </div>
         <div id="title" className='mt-12'>
           <h2 className='font-bold text-3xl'>

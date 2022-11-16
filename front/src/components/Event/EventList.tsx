@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, memo } from 'react'
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { IoLocationSharp } from 'react-icons/io5'
 import { AiFillPlusCircle } from 'react-icons/ai'
@@ -50,4 +50,4 @@ const Issued: React.FC<Props> = (props: Props): ReactElement => {
   )
 }
 
-export default Issued
+export default memo(Issued)
