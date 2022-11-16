@@ -16,18 +16,32 @@ services:
     restart: always
     environment:
       ## postgres database to store Hasura metadata
-      HASURA_GRAPHQL_METADATA_DATABASE_URL:  postgres://ldcgighzolqapq:8dd805d2f8dafdfe2bb4f976a375b7da45d226c04c2d3a497fc70ea8b8d04251@ec2-3-219-52-220.compute-1.amazonaws.com:5432/d72nbic7b3d8rv
+      HASURA_GRAPHQL_METADATA_DATABASE_URL:  postgres://postgres:ntsv3a@18.142.137.142:5432/postgres
       ## this env var can be used to add the above postgres database to Hasura as a data source. this can be removed/updated based on your needs
-      PG_DATABASE_URL:  postgres://ldcgighzolqapq:8dd805d2f8dafdfe2bb4f976a375b7da45d226c04c2d3a497fc70ea8b8d04251@ec2-3-219-52-220.compute-1.amazonaws.com:5432/d72nbic7b3d8rv
+      PG_DATABASE_URL:  postgres://postgres:ntsv3a@18.142.137.142:5432/postgres
       ## enable the console served by server
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
       ## enable debugging mode. It is recommended to disable this in production
       HASURA_GRAPHQL_DEV_MODE: "true"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
-      WEB_HOOK: http://host.docker.internal:3000
+      ##dev
+      # WEB_HOOK: http://host.docker.internal:3000
+      # WEB_HOOK_TICKET: http://host.docker.internal:3000/ticket/close
+      # WEB_HOOK_STATIC_B: http://host.docker.internal:3000/statistic/bought
+      # WEB_HOOK_APROVE: http://host.docker.internal:3000/ticket/approved/create
+      # WEB_HOOK_STATIC: http://host.docker.internal:3000//statistic/sold
+      # CRON_TRIGGER: http://host.docker.internal:3000/event/close
+      ##test
+      WEB_HOOK: http://18.142.137.142:3000
+      WEB_HOOK_TICKET: http://18.142.137.142:3000/ticket/close
+      WEB_HOOK_STATIC_B: http://18.142.137.142:3000/statistic/bought
+      WEB_HOOK_APROVE: http://18.142.137.142:3000/ticket/approved/create
+      WEB_HOOK_STATIC: http://18.142.137.142:3000//statistic/sold
+      CRON_TRIGGER: http://18.142.137.142:3000/event/close
       admin_serect: admin
+      
       ## uncomment next line to set an admin secret
-      # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      # HASURA_GRAPHQL_ADMIN_SECRET: admin_serect
 volumes:
   db_data:
 

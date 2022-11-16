@@ -11,8 +11,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ipfs = void 0;
 const ipfs_http_client_1 = require("ipfs-http-client");
-const id = "2BSmoijBj3BUXvPXtSNHnnK1b8m";
-const sercet = "e5cd332f98d4610eddfbee898c0b8b8b";
+const id = "2CYTFYLUywX5yGeeIW3vuTGovWt";
+const sercet = "fb6a1931dffcf3e35a2f361c888b5fca";
 const INFURA_TOKEN = Buffer.from(`${id}:${sercet}`).toString("base64");
 exports.ipfs = (0, ipfs_http_client_1.create)({
     host: "ipfs.infura.io",
@@ -26,9 +26,12 @@ const uploadImageToIPFS = (file) => __awaiter(void 0, void 0, void 0, function* 
     const added = yield exports.ipfs.add(file, {
         progress: (prog) => console.log(`received: ${prog}`),
     });
-    let v1CID = added.cid.toV1();
+    let v1CID = yield added.cid.toV1();
+    console.log(added.path);
     return {
-        image_link: `https://gateway.ipfs.io/ipfs/${v1CID}`
+        path: added.path,
+        CID: added.cid.toV1(),
+        link: `https://nts-v3-test.infura-ipfs.io/ipfs/${v1CID}`
     };
 });
 module.exports = uploadImageToIPFS;

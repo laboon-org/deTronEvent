@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const express = require("express");
 const bodyParser = require("body-parser");
+const router_custom = require("./router/index");
 var http = require("http");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,13 +25,6 @@ app.get("/hello", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         hello: "world",
     });
 }));
-app.use("/statistic", require('./router/statistic/statistic_bought'));
-app.use("/statistic", require('./router/statistic/statistic_sold'));
-app.use("/", require('./router/upload/index'));
-app.use("/", require('./router/account/index'));
-app.use("/qr", require('./router/qrcode/index'));
-app.use("/event", require('./router/event/index'));
-app.use("/ticket", require('./router/ticket/index'));
-app.use("/currency", require("./router/rateconvention/index"));
+router_custom(app);
 app.listen(PORT);
 //# sourceMappingURL=server.js.map

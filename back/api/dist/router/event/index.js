@@ -10,16 +10,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 var Router = require("router");
 var router = Router();
-const create_event = require("../event/create_event");
-const get_event_now = require("./event_now");
-const close_event = require("./close_event");
+const create_event = require("../../control/event/create_event");
+const get_event_now = require("../../control/event/event_now");
+const close_event = require("../../control/event/close_event");
+const check_event = require("../../control/event/check_event");
 var moment = require("moment-timezone");
 router.post("/create", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { end_date, image, owner, localtion, name, start_date, catogory_id } = req.body.input;
+    const check_events = yield check_event({ name });
+    if (check_events.data.Event.length > 0) {
+        return res.status(404).json({
+            type: 2,
+            message: "Tên event đã tồn tại",
+            status: 400,
+        });
+    }
     try {
+        console.log("data", req.body.input);
         const data = yield create_event({ end_date, image, owner, localtion, name, start_date }, catogory_id);
+        console.log(data);
         return res.json({
-            event: data.data.insert_Event
+            event: data.data
         });
     }
     catch (err) {
@@ -28,30 +39,31 @@ router.post("/create", (req, res) => __awaiter(void 0, void 0, void 0, function*
     }
 }));
 router.post("/close", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var dateGet = moment(new Date())
+    let dateGet = moment(new Date())
         .tz("Asia/Bangkok")
         .format("YYYY-MM-DD HH:mm");
     const date_heroku = new Date(dateGet);
     console.log(dateGet, date_heroku);
     try {
-        var dem = 0;
+        let dem = 0;
         const data = yield get_event_now();
         if (data.data.event_now.length > 0) {
-            for (var i in data.data.event_now) {
+            for (let i in data.data.event_now) {
                 const end_date = new Date(data.data.event_now[i].end_date);
                 console.log(end_date);
                 if (end_date - date_heroku <= 0 && data.data.event_now[i].status == 1) {
                     const close = yield close_event({ id: data.data.event_now[i].id });
                     console.log("đã close", close);
                     dem = dem + 1;
-                    return res.send("Đóng thành công");
                 }
             }
         }
         if (dem == 0) {
             return res.send("Đóng không thành công");
         }
-        console.log(data.data.event_now);
+        else {
+            return res.send("Đóng thành công");
+        }
     }
     catch (err) {
         return res.send("Đóng không thành công");

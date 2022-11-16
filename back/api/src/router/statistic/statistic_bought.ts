@@ -1,8 +1,8 @@
 var Router = require("router");
 var router = Router();
-const get_account_bought = require("../account/get_account_id");
-const get_ticket_bought = require("./get_ticket_id");
-const update = require("../account/update_account");
+const get_account_bought = require("../../control/account/get_account_id");
+const get_ticket_bought = require("../../control/statistic/get_ticket_id");
+const update = require("../../control/account/update_account");
 router.post("/bought", async (req: any, res: any) => {
   const data = req.body.event.data.new;
   console.log(data);

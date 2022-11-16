@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 var Router = require("router");
 var router = Router();
-const get_currency = require("./get_rate_convention");
+const get_currency = require("../../control/rateconvention/get_rate_convention");
 router.post("/exchange", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { currency } = req.body.input;
     try {

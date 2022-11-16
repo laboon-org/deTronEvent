@@ -1,5 +1,5 @@
 - name: close_event
-  webhook: http://host.docker.internal:3000/event/close
+  webhook: '{{CRON_TRIGGER}}'
   schedule: '*/5 * * * *'
   include_in_metadata: true
   payload: {}

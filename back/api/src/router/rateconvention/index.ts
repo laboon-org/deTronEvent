@@ -1,6 +1,6 @@
 var Router = require("router");
 var router = Router();
-const get_currency = require("./get_rate_convention")
+const get_currency = require("../../control/rateconvention/get_rate_convention")
 router.post("/exchange", async (req:any, res:any) => {
     const {currency} = req.body.input
   try {

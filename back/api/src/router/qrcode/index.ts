@@ -1,11 +1,14 @@
 import { json } from "node:stream/consumers";
 
 var Router = require("router");
-const create_qr = require("./create_qr_code")
+const create_qr = require("../../control/qrcode/create_qr_code")
 var router = Router();
 var btoas = require('btoa');
 const QRCode = require('qrcode');
-const get_ticket = require("./get_ticket")
+const get_ticket = require("../../control/qrcode/get_ticket")
+interface Respone{
+  qrcode:string
+}
 router.post("/create", async (req: any, res: any) => {
   const {ticket_id}= req.body.input 
   try {
@@ -20,7 +23,8 @@ router.post("/create", async (req: any, res: any) => {
     }
     const segs = btoas(JSON.stringify(output));
     let qr = await QRCode.toDataURL(segs);
-    const data = create_qr({id:ticket_id,qrcode:qr})
+    let data1 = create_qr({id:ticket_id,qrcode:qr})
+    console.log(data1)
     return res.json({
       data:{
         qrcode: qr

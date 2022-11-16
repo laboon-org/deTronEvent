@@ -10,11 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var Router = require("router");
-const create_qr = require("./create_qr_code");
+const create_qr = require("../../control/qrcode/create_qr_code");
 var router = Router();
 var btoas = require('btoa');
 const QRCode = require('qrcode');
-const get_ticket = require("./get_ticket");
+const get_ticket = require("../../control/qrcode/get_ticket");
 router.post("/create", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { ticket_id } = req.body.input;
     try {
@@ -29,7 +29,8 @@ router.post("/create", (req, res) => __awaiter(void 0, void 0, void 0, function*
         };
         const segs = btoas(JSON.stringify(output));
         let qr = yield QRCode.toDataURL(segs);
-        const data = create_qr({ id: ticket_id, qrcode: qr });
+        let data1 = create_qr({ id: ticket_id, qrcode: qr });
+        console.log(data1);
         return res.json({
             data: {
                 qrcode: qr

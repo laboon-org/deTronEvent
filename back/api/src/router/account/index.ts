@@ -1,6 +1,6 @@
 var Router = require("router");
 var router = Router();
-const createWallet = require("./create_wallet");
+const createWallet = require("../../control/account/create_wallet");
 router.post("/user/create", async (req: any, res: any) => {
   const { wallet_address } = req.body.input;
   try {

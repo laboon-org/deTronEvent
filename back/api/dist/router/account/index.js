@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 var Router = require("router");
 var router = Router();
-const createWallet = require("./create_wallet");
+const createWallet = require("../../control/account/create_wallet");
 router.post("/user/create", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { wallet_address } = req.body.input;
     try {
