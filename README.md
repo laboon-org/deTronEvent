@@ -63,9 +63,16 @@
 - Demo: https://dte.law3.app/
 - Credential: admin / 9rR9fT29tvPZ
 
-
 ### F. Forum
 
 - Season 2: https://forum.trondao.org/t/detronevent-event-management-eco-system/4392
 
 - Season 3: https://forum.trondao.org/t/detronevent-event-ticket-eco-system-season-3/13153
+
+### G. Obstacle Things
+
+1. High GAS Cost per transaction for minting NFT, and the Contract execution.
+2. Unrollable on failure transaction on the chain.
+3. Low Latency network on responding speed.
+4. Handling ASYNC processing is quite a complex.
+5. Contract deployment was facing trouble because of too much logic inside.
