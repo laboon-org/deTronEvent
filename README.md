@@ -125,12 +125,12 @@
 - User: Ticket Conductor
 
 > 1. Select the camera frame icon on the header
-Granting permission to use the camera
-Select the camera you want to use and click the Start Scanning button (if there is only one camera, skip this step)
-Scan the QR code of the Ticket you want to check.
-Wait for ticket validation.
-If the Ticket is valid and a transaction appears, sign the transaction to complete.
-In success, the usage information of the checked Ticket will change to "Used".
+> 2. Granting permission to use the camera
+> 3. Select the camera you want to use and click the Start Scanning button (if there is only one > 2. camera, skip this step)
+> 4. Scan the QR code of the Ticket you want to check.
+> 5. Wait for ticket validation.
+> 6. If the Ticket is valid and a transaction appears, sign the transaction to complete.
+> 7. In success, the usage information of the checked Ticket will change to "Used".
 
 ### F. Forum
 
